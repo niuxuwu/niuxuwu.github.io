@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>龙骨植物介绍</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://s.coze.cn/image/r8sR9qDFFK0/');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .highlight {
+            background-color: rgba(40, 167, 69, 0.2);
+            padding: 0 4px;
+            border-radius: 4px;
+        }
+        .warning {
+            background-color: rgba(220, 53, 69, 0.2);
+            padding: 0 4px;
+            border-radius: 4px;
+        }
+        .section-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- 导航栏 -->
+    <nav class="bg-green-700 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-leaf text-2xl mr-2"></i>
+                <span class="text-xl font-bold">龙骨植物</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#classification" class="hover:text-green-200 transition">分类</a>
+                <a href="#features" class="hover:text-green-200 transition">特征</a>
+                <a href="#growth" class="hover:text-green-200 transition">习性</a>
+                <a href="#cultivation" class="hover:text-green-200 transition">栽培</a>
+                <a href="#value" class="hover:text-green-200 transition">价值</a>
+                <a href="#culture" class="hover:text-green-200 transition">文化</a>
+            </div>
+            <button id="mobileMenuBtn" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobileMenu" class="mobile-menu bg-green-800 md:hidden">
+            <div class="container mx-auto px-4 py-2 flex flex-col">
+                <a href="#classification" class="py-2 hover:text-green-200 transition">分类</a>
+                <a href="#features" class="py-2 hover:text-green-200 transition">特征</a>
+                <a href="#growth" class="py-2 hover:text-green-200 transition">习性</a>
+                <a href="#cultivation" class="py-2 hover:text-green-200 transition">栽培</a>
+                <a href="#value" class="py-2 hover:text-green-200 transition">价值</a>
+                <a href="#culture" class="py-2 hover:text-green-200 transition">文化</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 头部横幅 -->
+    <header class="hero-bg text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">龙骨植物</h1>
+            <p class="text-xl md:text-2xl mb-8">彩云阁 · 三角霸王鞭 · 龙骨柱</p>
+            <div class="flex justify-center">
+                <div class="bg-white text-green-700 px-6 py-2 rounded-full font-semibold shadow-lg">
+                    <i class="fas fa-seedling mr-2"></i>多肉植物中的"镇宅之宝"
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- 分类信息 -->
+        <section id="classification" class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="section-icon bg-green-100 text-green-700">
+                    <i class="fas fa-tags text-2xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold">植物分类与学名</h2>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-green-700">基本信息</h3>
+                        <ul class="space-y-3">
+                            <li><span class="font-semibold">学名：</span><em>Euphorbia trigona</em> Mill.</li>
+                            <li><span class="font-semibold">别名：</span>彩云阁、三角霸王鞭、龙骨柱</li>
+                            <li><span class="font-semibold">科属：</span>大戟科（Euphorbiaceae）大戟属（<em>Euphorbia</em>）</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-green-700">分类注意</h3>
+                        <p>常被误认为仙人掌科植物，实则与量天尺（三棱箭）、龙舌兰等形态相似但分类不同，其关键区别在于<span class="warning">白色有毒乳汁</span>和<span class="highlight">杯状聚伞花序</span>。</p>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <img src="https://s.coze.cn/image/V2rxrmf25fE/" alt="龙骨植物分类对比" class="w-full rounded-lg shadow">
+                </div>
+            </div>
+        </section>
+
+        <!-- 形态特征 -->
+        <section id="features" class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="section-icon bg-green-100 text-green-700">
+                    <i class="fas fa-eye text-2xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold">形态特征</h2>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-green-700">茎干</h3>
+                        <p>直立多分枝，呈三棱柱状，直径3-6厘米，表面深绿色带淡绿色斑纹，棱缘具波浪状突起，着生红褐色短刺（长0.3-0.4厘米）。</p>
+                        <img src="https://s.coze.cn/image/xCR8Gfm8eH4/" alt="龙骨植物茎干" class="w-full mt-4 rounded-lg shadow">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-green-700">叶片</h3>
+                        <p>肉质叶长卵圆形，长4-5厘米，着生于分枝顶端棱上，冬季脱落。</p>
+                        
+                        <h3 class="text-xl font-semibold mb-4 mt-6 text-green-700">花朵</h3>
+                        <p>盆栽罕见开花，野生环境下夏季开黄绿色杯状小花，夜开昼闭。</p>
+                        
+                        <h3 class="text-xl font-semibold mb-4 mt-6 text-green-700">乳汁</h3>
+                        <p class="warning">全株含白色有毒汁液，接触皮肤可引起红肿，入眼可能导致失明。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 生长习性 -->
+        <section id="growth" class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="section-icon bg-green-100 text-green-700">
+                    <i class="fas fa-sun text-2xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold">生长习性</h2>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <div class="flex items-start mb-6">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-lightbulb text-green-700"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-green-700">光照</h3>
+                                <p>喜强光，每日需4-6小时直射光，夏季高温时需适当遮阴。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-thermometer-half text-blue-700"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-blue-700">温度</h3>
+                                <p>适宜生长温度15-30℃，冬季需保持5℃以上，低于0℃会冻伤。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-start mb-6">
+                            <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-tint text-yellow-700"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-yellow-700">水分</h3>
+                                <p>耐旱不耐涝，土壤需完全干燥后再浇水，夏季7-10天一次，冬季15-20天一次。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-seedling text-purple-700"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-purple-700">土壤</h3>
+                                <p>偏好疏松透气的沙质土壤，推荐配方：腐叶土+园土+粗沙=2:1:2，可添加草木灰增强排水。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 栽培方法 -->
+        <section id="cultivation" class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="section-icon bg-green-100 text-green-700">
+                    <i class="fas fa-spa text-2xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold">栽培与繁殖</h2>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                <h3 class="text-2xl font-semibold mb-6 text-green-700">扦插繁殖</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <div class="flex items-start mb-4">
+                            <div class="bg-green-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-clock text-green-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold">时间</h4>
+                                <p>春末夏初（气温20℃以上）</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-list-ol text-green-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold">步骤</h4>
+                                <ol class="list-decimal pl-5 space-y-2 mt-2">
+                                    <li>剪取健壮茎段10-15厘米，伤口涂抹草木灰或硫磺粉，晾干3-5天至切口收缩</li>
+                                    <li>插入河沙或蛭石基质，深度3-5厘米，保持土壤微潮</li>
+                                    <li>置于通风散光处，约30天生根，生根后移栽至排水良好的花盆</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://s.coze.cn/image/CzqqEU7MMP8/" alt="龙骨植物扦插繁殖" class="w-full rounded-lg shadow">
+                    </div>
+                </div>
+                
+                <h3 class="text-2xl font-semibold mb-6 mt-10 text-green-700">日常养护</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-green-700 mb-2"><i class="fas fa-utensils mr-2"></i>施肥</h4>
+                        <p>生长期（4-9月）每月施一次氮磷钾复合肥（比例3:1:2），冬季停止施肥</p>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-blue-700 mb-2"><i class="fas fa-cut mr-2"></i>修剪</h4>
+                        <p>春季剪去过密枝条，保持株型通风，剪后及时处理伤口</p>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-purple-700 mb-2"><i class="fas fa-exchange-alt mr-2"></i>换盆</h4>
+                        <p>每年春季换盆一次，盆底垫陶粒增强排水，避免盆器过大导致烂根</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 主要价值 -->
+        <section id="value" class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="section-icon bg-green-100 text-green-700">
+                    <i class="fas fa-star text-2xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold">主要价值</h2>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-green-700">观赏价值</h3>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>株型挺拔，适合室内大型盆栽或多肉组合景观，可培养成9柱形、12柱形等造型</li>
+                            <li>变种<strong>红彩云阁</strong>（<em>Euphorbia trigona</em> 'Royal Red'）茎部带紫红色，观赏价值更高</li>
+                        </ul>
+                        <img src="https://s.coze.cn/image/HidVFJJljGQ/" alt="红彩云阁变种" class="w-full mt-4 rounded-lg shadow">
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-green-700">生态价值</h3>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>夜间吸收二氧化碳能力比普通植物高42%，适合改善室内空气质量</li>
+                            <li>蒸腾作用弱，可降低室内湿度</li>
+                        </ul>
+                        
+                        <h3 class="text-2xl font-semibold mb-4 mt-6 text-green-700">药用研究</h3>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>乳汁含ingenol型二萜类化合物，体外实验显示对 keratinocyte 细胞有抑制作用（PMID: 34198524）</li>
+                            <li>传统中医中未见应用，需与药用"龙骨"（古生物化石）严格区分</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 注意事项 -->
+        <section class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="section-icon bg-red-100 text-red-700">
+                    <i class="fas fa-exclamation-triangle text-2xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold">注意事项</h2>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-red-700">毒性警示</h3>
+                        <p class="warning">汁液含刺激性生物碱，接触皮肤需立即用肥皂水清洗，误食需就医</p>
+                        
+                        <h3 class="text-xl font-semibold mb-4 mt-6 text-red-700">摆放位置</h3>
+                        <p>避免儿童及宠物接触，建议放置于高处或通风阳台</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-red-700">常见问题</h3>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>茎干腐烂：</strong>多因浇水过多，需脱盆切除腐烂部分，消毒后重新栽种</li>
+                            <li><strong>叶色发黄：</strong>可能光照不足或土壤板结，建议移至光照处并松土</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 植物文化 -->
+        <section id="culture" class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="section-icon bg-green-100 text-green-700">
+                    <i class="fas fa-book text-2xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold">植物文化</h2>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 card-hover">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-green-700">象征意义</h3>
+                        <p>在中国文化中寓意"镇宅辟邪"，常作为新居乔迁礼物</p>
+                        
+                        <img src="https://s.coze.cn/image/GJ5xibEHGJQ/" alt="龙骨植物文化象征" class="w-full mt-4 rounded-lg shadow">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-green-700">栽培历史</h3>
+                        <p>原产非洲中部，20世纪80年代引入中国，现为最普及的多肉植物之一</p>
+                        
+                        <div class="bg-gray-50 p-4 rounded-lg mt-6">
+                            <h4 class="font-semibold mb-2">参考资料：</h4>
+                            <ol class="list-decimal pl-5 space-y-1 text-sm">
+                                <li>中国科学院植物研究所. 大戟属分类研究[EB/OL].</li>
+                                <li>宝禾网. 大戟科植物龙骨种类鉴别[EB/OL]. 2024-10-05.</li>
+                                <li><em>Plants</em>期刊. <em>Euphorbia trigona</em> 化学成分研究[J]. 2021.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+            
+            const icon = this.querySelector('i');
+            if (menu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // 如果是移动端菜单，点击后关闭菜单
+                    const menu = document.getElementById('mobileMenu');
+                    if (menu.classList.contains('active')) {
+                        menu.classList.remove('active');
+                        const icon = document.getElementById('mobileMenuBtn').querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
